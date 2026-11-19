@@ -171,11 +171,13 @@ def rebuild_outputs():
         "snapshot_id": latest_id,
         "report_date": latest[0]["report_date"],
         "snapshot_time": slot,
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": "HSE Urgent and Emergency Care report",
         "national": {c: nat[c] for c in COLUMNS} if nat else None,
         "regions": [{"name": r["hospital"], **{c: r[c] for c in COLUMNS}}
                     for r in latest if r["kind"] == "region_total"],
         "hospitals": sorted(out_hosp, key=lambda h: (-(h["total_trolleys"] or -1), h["name"])),
     }
-    (DATA / "latest.json").write_text(json.dumps(payload, indent=2))
+    out = DATA / "latest.json"
+    new = json.dumps(payload, indent=2)
+    if not out.exists() or out.read_text() != new:   # avoid pointless hourly commits
+        out.write_text(new)

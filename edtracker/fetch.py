@@ -1,11 +1,12 @@
 """Download HSE report PDFs.
 
 Two discovery routes, because the HSE could change either:
- 1. Known URL pattern on assets.hse.ie (seen on reports since at least 2023):
-      SDUReport2023_19_12_2023_1400.pdf  -> year, day, month, year, HHMM
- 2. Scrape the public report page for any .pdf links.
-If both stop working, check the report page in a browser, copy a PDF link,
-and update URL_TEMPLATES / INDEX_URL below.
+ 1. The daily archive page, which links the last ~14 days of reports.
+ 2. Known URL patterns on assets.hse.ie, used to backfill older days:
+      Urgent_and_Emergency_Care_-_18_November_2026.pdf   (current, one per day)
+      SDUReport2023_19_12_2023_1400.pdf                   (older naming)
+If both stop working, open INDEX_URLS in a browser, copy a PDF link,
+and update URL_TEMPLATES / INDEX_URLS below.
 """
 from __future__ import annotations
 
@@ -17,12 +18,15 @@ from urllib.parse import urljoin
 
 import requests
 
-INDEX_URL = "https://www2.hse.ie/services/urgent-emergency-care-report/"
-URL_TEMPLATES = [
-    "https://assets.hse.ie/media/documents/SDUReport{Y}_{dd}_{mm}_{Y}_{slot}.pdf",
-    "https://assets.hse.ie/media/documents/SDUReport{Y}_{d}_{m}_{Y}_{slot}.pdf",
+INDEX_URLS = [
+    "https://www2.hse.ie/services/urgent-and-emergency-care-report-daily-archive/",
+    "https://www2.hse.ie/services/urgent-emergency-care-report/",
 ]
-SLOTS = ["0800", "1400", "2000"]
+URL_TEMPLATES = [
+    "https://assets.hse.ie/media/documents/Urgent_and_Emergency_Care_-_{d}_{month}_{Y}.pdf",
+    "https://assets.hse.ie/media/documents/SDUReport{Y}_{dd}_{mm}_{Y}_{slot}.pdf",
+]
+SLOTS = ["0800"]
 HEADERS = {"User-Agent": "hse-ed-tracker/0.1 (open-data project; polite daily fetch)"}
 TIMEOUT = 30
 PDF_LINK_RE = re.compile(r'href="([^"]+?\.pdf)"', re.I)
@@ -36,21 +40,28 @@ def candidate_urls(day: date, slots=SLOTS) -> list[str]:
     for slot in slots:
         for t in URL_TEMPLATES:
             u = t.format(Y=day.year, dd=f"{day.day:02d}", mm=f"{day.month:02d}",
-                         d=day.day, m=day.month, slot=slot)
+                         d=day.day, m=day.month, month=day.strftime("%B"), slot=slot)
             if u not in urls:
                 urls.append(u)
     return urls
 
 
 def index_pdf_links() -> list[str]:
-    """PDF links on the HSE report page. Empty list if the page can't be read."""
-    try:
-        r = session.get(INDEX_URL, timeout=TIMEOUT)
-        r.raise_for_status()
-    except requests.RequestException as e:
-        print(f"  index page unavailable: {e}")
-        return []
-    return sorted({urljoin(INDEX_URL, h) for h in PDF_LINK_RE.findall(r.text)})
+    """PDF links on the HSE pages, newest first (as the archive lists them)."""
+    links = []
+    for page in INDEX_URLS:
+        try:
+            r = session.get(page, timeout=TIMEOUT)
+            r.raise_for_status()
+        except requests.RequestException as e:
+            print(f"  index page unavailable: {page}: {e}")
+            continue
+        for h in PDF_LINK_RE.findall(r.text):
+            u = urljoin(page, h)
+            if u not in links:
+                links.append(u)
+    print(f"  {len(links)} PDF links on HSE pages")
+    return links
 
 
 def download(url: str) -> bytes | None:

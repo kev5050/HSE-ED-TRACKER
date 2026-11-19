@@ -77,7 +77,11 @@ def run_days(days, use_index: bool, check_stale: bool = False) -> int:
                 continue
             urls.append(u)
     if use_index:
-        urls += [u for u in fetch.index_pdf_links() if u not in urls]
+        # Re-check the newest listed report (it can be re-published during the
+        # day); skip older listed ones we've already stored.
+        for i, u in enumerate(fetch.index_pdf_links()):
+            if u not in urls and (i == 0 or u not in state["processed"]):
+                urls.append(u)
     for url in urls:
         pdf = fetch.download(url)
         if pdf is not None:

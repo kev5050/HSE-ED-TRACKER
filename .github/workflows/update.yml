@@ -1,0 +1,53 @@
+name: Fetch HSE report
+
+on:
+  schedule:
+    # Hourly, 07:15-21:15 UTC (Irish time is UTC in winter, UTC+1 in summer).
+    - cron: "15 7-21 * * *"
+  workflow_dispatch: {}   # "Run workflow" button for manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Tests
+        run: python -m pytest -q
+
+      - name: Fetch and parse
+        id: fetch
+        run: python -m edtracker update
+        continue-on-error: true
+
+      - name: Commit new data
+        run: |
+          git config user.name "hse-ed-tracker bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "data: $(jq -r .snapshot_id data/latest.json)"
+            git push
+          fi
+
+      # Fail the run (GitHub emails you) if parsing broke or data went stale,
+      # but only after saving whatever we did get.
+      - name: Report failure
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1

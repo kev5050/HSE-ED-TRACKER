@@ -1,0 +1,10 @@
+{
+  "errors": [],
+  "processed": {
+    "file:SDUReport2026_15_11_2026_0800.pdf": {
+      "fetched_at": "2026-11-19T13:45:11+00:00",
+      "sha256": "643acbb12a1f9c5d49e8c11358de9a9fc17dbd67a07ebe0499ff0f7c5d1ffe2e",
+      "snapshot_id": "2026-11-15T08:00"
+    }
+  }
+}

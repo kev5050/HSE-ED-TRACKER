@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# Raw PDFs are ~100KB each and add up fast in git. Kept locally for re-parsing.
+data/raw/
+data/failed/

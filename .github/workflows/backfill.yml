@@ -1,13 +1,15 @@
 name: Backfill history
 
 # Manual only: Actions tab -> "Backfill history" -> Run workflow -> enter dates.
+# Note: the HSE only keeps ~14 days of reports online, so this is mainly for
+# catching up after an outage. The hourly job already picks up all 14 days.
 on:
   workflow_dispatch:
     inputs:
       start:
         description: "Start date (YYYY-MM-DD)"
         required: true
-        default: "2026-10-01"
+        default: "2026-11-01"
       end:
         description: "End date (YYYY-MM-DD, blank = today)"
         required: false

@@ -144,13 +144,19 @@ def rebuild_outputs():
     end = date.fromisoformat(latest[0]["report_date"])
     start = end - timedelta(days=BASELINE_DAYS)
 
-    # Baseline: same time of day, previous 28 days, per hospital.
-    window: dict[str, list[int]] = {}
+    # Baseline: one reading per day (that day's latest report) over the
+    # previous 28 days, per hospital. The HSE publishes one report a day, but
+    # occasionally re-issues it later (e.g. stamped 14:00).
+    per_day: dict[tuple, dict] = {}
     for r in rows:
-        if (r["kind"] == "hospital" and r["snapshot_time"] == slot
-                and start <= date.fromisoformat(r["report_date"]) < end
-                and r["total_trolleys"] is not None):
-            window.setdefault(r["hospital_id"], []).append(r["total_trolleys"])
+        if (r["kind"] == "hospital" and r["total_trolleys"] is not None
+                and start <= date.fromisoformat(r["report_date"]) < end):
+            key = (r["hospital_id"], r["report_date"])
+            if key not in per_day or r["snapshot_time"] > per_day[key]["snapshot_time"]:
+                per_day[key] = r
+    window: dict[str, list[int]] = {}
+    for (hid, _), r in per_day.items():
+        window.setdefault(hid, []).append(r["total_trolleys"])
 
     out_hosp = []
     for r in latest:

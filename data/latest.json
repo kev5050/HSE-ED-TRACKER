@@ -87,8 +87,8 @@
       "delayed_transfers": 23,
       "waiting_over_24h": 6,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 37.5,
-      "baseline_days": 12,
+      "usual_total_trolleys": 38.5,
+      "baseline_days": 13,
       "pressure": "much busier than usual"
     },
     {
@@ -103,8 +103,8 @@
       "delayed_transfers": 45,
       "waiting_over_24h": 10,
       "over75_over_24h": 6,
-      "usual_total_trolleys": 44.8,
-      "baseline_days": 12,
+      "usual_total_trolleys": 42.4,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -119,8 +119,8 @@
       "delayed_transfers": 36,
       "waiting_over_24h": 11,
       "over75_over_24h": 3,
-      "usual_total_trolleys": 37.6,
-      "baseline_days": 12,
+      "usual_total_trolleys": 37.3,
+      "baseline_days": 13,
       "pressure": "much busier than usual"
     },
     {
@@ -135,8 +135,8 @@
       "delayed_transfers": 14,
       "waiting_over_24h": 11,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 16.3,
-      "baseline_days": 12,
+      "usual_total_trolleys": 18.3,
+      "baseline_days": 13,
       "pressure": "much busier than usual"
     },
     {
@@ -151,8 +151,8 @@
       "delayed_transfers": 42,
       "waiting_over_24h": 10,
       "over75_over_24h": 4,
-      "usual_total_trolleys": 33.6,
-      "baseline_days": 12,
+      "usual_total_trolleys": 33.2,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -167,8 +167,8 @@
       "delayed_transfers": 25,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 8.3,
-      "baseline_days": 12,
+      "usual_total_trolleys": 8.6,
+      "baseline_days": 13,
       "pressure": "much busier than usual"
     },
     {
@@ -183,8 +183,8 @@
       "delayed_transfers": 7,
       "waiting_over_24h": 3,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 18.6,
-      "baseline_days": 12,
+      "usual_total_trolleys": 18.2,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -199,8 +199,8 @@
       "delayed_transfers": 42,
       "waiting_over_24h": 3,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 21.4,
-      "baseline_days": 12,
+      "usual_total_trolleys": 20.9,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -215,8 +215,8 @@
       "delayed_transfers": 18,
       "waiting_over_24h": 5,
       "over75_over_24h": 3,
-      "usual_total_trolleys": 18.6,
-      "baseline_days": 12,
+      "usual_total_trolleys": 18.4,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -231,8 +231,8 @@
       "delayed_transfers": 35,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 14.8,
-      "baseline_days": 12,
+      "usual_total_trolleys": 14.7,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -247,8 +247,8 @@
       "delayed_transfers": 11,
       "waiting_over_24h": 1,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 5.6,
-      "baseline_days": 12,
+      "usual_total_trolleys": 5.9,
+      "baseline_days": 13,
       "pressure": "much busier than usual"
     },
     {
@@ -263,8 +263,8 @@
       "delayed_transfers": 30,
       "waiting_over_24h": 6,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 23.3,
-      "baseline_days": 12,
+      "usual_total_trolleys": 23.5,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -279,8 +279,8 @@
       "delayed_transfers": 26,
       "waiting_over_24h": 9,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 10.6,
-      "baseline_days": 12,
+      "usual_total_trolleys": 10.9,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -295,8 +295,8 @@
       "delayed_transfers": 9,
       "waiting_over_24h": 3,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 16.8,
-      "baseline_days": 12,
+      "usual_total_trolleys": 17.6,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -311,8 +311,8 @@
       "delayed_transfers": 13,
       "waiting_over_24h": 2,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 10.2,
-      "baseline_days": 12,
+      "usual_total_trolleys": 9.7,
+      "baseline_days": 13,
       "pressure": "busier than usual"
     },
     {
@@ -327,8 +327,8 @@
       "delayed_transfers": 9,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 8.9,
-      "baseline_days": 12,
+      "usual_total_trolleys": 9,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -343,8 +343,8 @@
       "delayed_transfers": 27,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 10.3,
-      "baseline_days": 12,
+      "usual_total_trolleys": 10.1,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -359,8 +359,8 @@
       "delayed_transfers": 6,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 3,
-      "baseline_days": 12,
+      "usual_total_trolleys": 2.8,
+      "baseline_days": 13,
       "pressure": "much busier than usual"
     },
     {
@@ -375,8 +375,8 @@
       "delayed_transfers": 11,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 8.1,
-      "baseline_days": 12,
+      "usual_total_trolleys": 8.3,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -391,8 +391,8 @@
       "delayed_transfers": 7,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 8.1,
-      "baseline_days": 12,
+      "usual_total_trolleys": 8.5,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -407,8 +407,8 @@
       "delayed_transfers": 7,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 8,
-      "baseline_days": 12,
+      "usual_total_trolleys": 8.1,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -424,7 +424,7 @@
       "waiting_over_24h": 1,
       "over75_over_24h": 0,
       "usual_total_trolleys": 0.8,
-      "baseline_days": 12,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -439,8 +439,8 @@
       "delayed_transfers": 1,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 2.8,
-      "baseline_days": 12,
+      "usual_total_trolleys": 3.1,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -455,8 +455,8 @@
       "delayed_transfers": 5,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 2.2,
-      "baseline_days": 12,
+      "usual_total_trolleys": 2.3,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -472,7 +472,7 @@
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
       "usual_total_trolleys": 0.5,
-      "baseline_days": 12,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -487,8 +487,8 @@
       "delayed_transfers": 5,
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
-      "usual_total_trolleys": 0.3,
-      "baseline_days": 12,
+      "usual_total_trolleys": 0.4,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -520,7 +520,7 @@
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
       "usual_total_trolleys": 0.7,
-      "baseline_days": 12,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -568,7 +568,7 @@
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
       "usual_total_trolleys": 0,
-      "baseline_days": 12,
+      "baseline_days": 13,
       "pressure": "usual"
     },
     {
@@ -744,7 +744,7 @@
       "waiting_over_24h": 0,
       "over75_over_24h": 0,
       "usual_total_trolleys": 0,
-      "baseline_days": 12,
+      "baseline_days": 13,
       "pressure": "usual"
     }
   ]

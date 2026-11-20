@@ -94,7 +94,19 @@ Blank = the hospital doesn't report that figure. Hospitals with `has_ed: false`
 in `hospitals.json` (Cappagh, NRH, Bantry, etc.) have no 24-hour ED and shouldn't
 appear in the ED rankings.
 
+## Website
+
+`site/` is a static page (plain HTML, CSS and JS, no build step) that reads
+`data/latest.json`, `data/history.json` and `data/locations.json`.
+`.github/workflows/pages.yml` publishes it to GitHub Pages on every change and
+after every hourly fetch.
+
+- Preview locally: `mkdir -p _site/data && cp -r site/* _site/ && cp data/latest.json data/history.json data/locations.json _site/data/ && python -m http.server -d _site`
+- Hospital coordinates and towns live in `data/locations.json` (hand-maintained,
+  approximate - check them). `children: true` marks children's EDs.
+- The site name is a placeholder ("ED Today") in `site/index.html`.
+
 ## Next up
 
-- Add coordinates and ED opening hours to `hospitals.json` (for "nearest ED").
-- Build the site on top of `data/latest.json`.
+- Custom domain once a name is picked.
+- Same-weekday comparison for "vs usual" once there are ~6 weeks of history.

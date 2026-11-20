@@ -183,6 +183,27 @@ def rebuild_outputs():
                     for r in latest if r["kind"] == "region_total"],
         "hospitals": sorted(out_hosp, key=lambda h: (-(h["total_trolleys"] or -1), h["name"])),
     }
+    # Daily history for charts: last 28 days, one reading per day per hospital.
+    hist_start = end - timedelta(days=27)
+    daily: dict[tuple, dict] = {}
+    for r in rows:
+        if hist_start <= date.fromisoformat(r["report_date"]) <= end:
+            key = (r["kind"], r["hospital_id"] or r["hospital"], r["report_date"])
+            if key not in daily or r["snapshot_time"] > daily[key]["snapshot_time"]:
+                daily[key] = r
+    series: dict[str, list] = {}
+    national: list = []
+    for (kind, hid, day), r in sorted(daily.items(), key=lambda kv: kv[0][2]):
+        point = [day, r["total_trolleys"]]
+        if kind == "hospital":
+            series.setdefault(hid, []).append(point)
+        elif kind == "national_total":
+            national.append(point)
+    hist_out = DATA / "history.json"
+    hist_json = json.dumps({"national": national, "hospitals": series}, separators=(",", ":"))
+    if not hist_out.exists() or hist_out.read_text() != hist_json:
+        hist_out.write_text(hist_json)
+
     out = DATA / "latest.json"
     new = json.dumps(payload, indent=2)
     if not out.exists() or out.read_text() != new:   # avoid pointless hourly commits

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How busy is my ED today? Irish emergency departments</title>
+  <meta name="description" content="See how many people are waiting on trolleys at each Irish emergency department today, compared with that hospital's usual level. From the HSE's daily report.">
+  <meta name="theme-color" content="#F2F5F3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="emergency">
+    In an emergency, call <a href="tel:112">112</a> or <a href="tel:999">999</a>. Don't put off care because of anything on this page.
+  </p>
+
+  <div class="page">
+    <header class="masthead">
+      <a class="wordmark" href="./">ED Today</a>
+    </header>
+
+    <main>
+      <section class="lede" aria-live="polite">
+        <h1 id="headline">Loading today's HSE report…</h1>
+        <p id="subline" class="subline"></p>
+        <p id="stamp" class="stamp"></p>
+      </section>
+
+      <section class="finder" aria-label="Find an emergency department">
+        <div class="finder-row">
+          <label class="visually-hidden" for="search">Search by hospital or town</label>
+          <input id="search" type="search" placeholder="Search hospital or town" autocomplete="off">
+          <button id="locate" type="button">Use my location</button>
+        </div>
+        <div class="sort" role="radiogroup" aria-label="Sort hospitals">
+          <span class="sort-label" id="sort-label">Sort by</span>
+          <button type="button" role="radio" data-sort="waiting" aria-checked="true">Most waiting</button>
+          <button type="button" role="radio" data-sort="vs-usual" aria-checked="false">Busiest vs usual</button>
+          <button type="button" role="radio" data-sort="nearest" aria-checked="false" hidden>Nearest</button>
+          <button type="button" role="radio" data-sort="name" aria-checked="false">A to Z</button>
+        </div>
+        <p id="locate-msg" class="locate-msg" role="status"></p>
+      </section>
+
+      <p class="key">
+        <span class="key-bar" aria-hidden="true"><span class="key-fill"></span><span class="key-usual"></span></span>
+        Each notch is one person on a trolley. The upright line marks that hospital's usual level.
+      </p>
+
+      <ol id="list" class="list" aria-label="Emergency departments"></ol>
+      <p id="empty" class="empty" hidden>No hospital matches that search. Try a town or county name, or clear the search box.</p>
+
+      <section class="about" id="about">
+        <h2>What these numbers are</h2>
+        <p>
+          The count of patients who have been seen in an emergency department, need to be admitted, and are waiting
+          on a trolley for a bed. It includes trolleys in the ED and on wards. The HSE takes this count at 8am every day.
+        </p>
+        <p>
+          "Usual" is that hospital's average over the previous four weeks. Weekends are usually quieter, so weekdays can
+          read as busier than usual until there's more history to compare like with like.
+        </p>
+
+        <h2>What they aren't</h2>
+        <p>
+          This isn't how long you'll wait to be seen. Nobody in Ireland publishes that. A high trolley count does mean a
+          department is under pressure, and that usually means longer waits for everyone.
+        </p>
+        <p>
+          For minor injuries such as sprains, cuts or suspected simple fractures, an
+          <a href="https://www2.hse.ie/services/find-urgent-emergency-care/">injury unit or out-of-hours GP</a>
+          is often faster. Children under 16 in Dublin should go to a Children's Health Ireland ED.
+        </p>
+
+        <h2>Where the data comes from</h2>
+        <p>
+          The HSE's daily
+          <a href="https://www2.hse.ie/services/urgent-and-emergency-care-report-daily-archive/">Urgent and Emergency Care report</a>.
+          We read it as soon as it's published and keep the history, which the HSE removes after two weeks.
+          Hospitals that report but have no 24-hour emergency department aren't listed.
+        </p>
+        <p>
+          This site isn't run by the HSE. Figures are copied from their report and may contain errors. If you're unsure
+          where to go, phone your GP or out-of-hours GP service.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Data: Health Service Executive. Code and full history on <a href="https://github.com/kev5050/HSE-ED-TRACKER">GitHub</a>.</p>
+    </footer>
+  </div>
+
+  <template id="row-tpl">
+    <li class="row">
+      <button class="row-head" type="button" aria-expanded="false">
+        <span class="row-top">
+          <span class="row-name"></span>
+          <span class="row-count"><span class="num"></span><span class="unit">waiting</span></span>
+        </span>
+        <span class="row-where"></span>
+        <span class="bar" aria-hidden="true"><span class="fill"></span><span class="usual"></span></span>
+        <span class="row-status"></span>
+      </button>
+      <div class="row-detail" hidden>
+        <figure class="trend">
+          <figcaption>People on trolleys at 8am each day</figcaption>
+          <svg class="spark" role="img"></svg>
+          <span class="spark-range"></span>
+        </figure>
+        <dl class="breakdown"></dl>
+        <a class="directions" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

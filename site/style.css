@@ -1,0 +1,234 @@
+:root {
+  --paper: #F2F5F3;
+  --ink: #13272C;
+  --muted: #5A6D71;
+  --rule: #D3DCD9;
+  --track: #E2E9E6;
+  --quiet: #2F7D6D;
+  --usual: #4E6A70;
+  --busy: #C77700;
+  --busier: #B3262D;
+  --focus: #1D5FD1;
+
+  --font: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Type scale, ratio ~1.25 */
+  --s-1: 0.833rem;
+  --s0: 1rem;
+  --s1: 1.25rem;
+  --s2: 1.563rem;
+  --s3: 1.953rem;
+  --s4: 2.441rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* Emergency strip */
+.emergency {
+  margin: 0;
+  padding: 0.6rem 1.25rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: var(--s-1);
+  text-align: center;
+}
+.emergency a { font-weight: 700; }
+
+.page { max-width: 42.5rem; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+.masthead { padding: 1.25rem 0 0; }
+.wordmark {
+  font-weight: 800;
+  font-size: var(--s1);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+/* Headline sentence */
+.lede { padding: 2.5rem 0 1.75rem; }
+.lede h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 6vw, var(--s4));
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+.lede h1 .big { font-weight: 800; }
+.subline { margin: 1rem 0 0; font-size: var(--s1); color: var(--ink); max-width: 34ch; }
+.stamp { margin: 0.75rem 0 0; color: var(--muted); font-size: var(--s-1); }
+.stamp.stale { color: var(--busier); font-weight: 700; }
+
+/* Finder */
+.finder { border-top: 2px solid var(--ink); padding-top: 1.25rem; }
+.finder-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.finder input {
+  flex: 1 1 14rem;
+  min-height: 3rem;
+  padding: 0 0.9rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--usual);
+  border-radius: 6px;
+}
+.finder input::placeholder { color: var(--muted); }
+#locate {
+  min-height: 3rem;
+  padding: 0 1.1rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--paper);
+  background: var(--ink);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#locate[aria-busy="true"] { opacity: 0.7; cursor: progress; }
+
+.sort { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.5rem; margin-top: 0.9rem; }
+.sort-label { color: var(--muted); font-size: var(--s-1); margin-right: 0.25rem; }
+.sort button {
+  font: inherit;
+  font-size: var(--s-1);
+  padding: 0.35rem 0.8rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1.5px solid var(--rule);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.sort button[aria-checked="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); font-weight: 700; }
+.locate-msg { margin: 0.5rem 0 0; min-height: 1.2em; font-size: var(--s-1); color: var(--muted); }
+
+/* Key */
+.key { display: flex; align-items: center; gap: 0.75rem; margin: 1.25rem 0 0.25rem; font-size: var(--s-1); color: var(--muted); }
+.key-bar { position: relative; flex: 0 0 5.5rem; height: 0.875rem; background: var(--track); border-radius: 2px; container-type: inline-size; --max: 12; }
+.key-fill { position: absolute; inset: 0 auto 0 0; width: 66%; background: var(--notches-ink); }
+.key-usual { position: absolute; top: -0.2rem; bottom: -0.2rem; left: 50%; width: 2px; background: var(--ink); }
+
+/* The trolley bar: each notch = one person.
+   Notch width is computed from the track width (container query units)
+   divided by the scale maximum (--max), so 1 notch == 1 trolley. */
+.bar, .key-bar {
+  --unit: calc(100cqw / var(--max));
+  --notches-ink: repeating-linear-gradient(90deg,
+    currentColor 0 calc(var(--unit) - 1px),
+    transparent calc(var(--unit) - 1px) var(--unit));
+}
+.key-bar { color: var(--usual); }
+
+/* List */
+.list { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.row { border-bottom: 1px solid var(--rule); }
+.row-head {
+  display: grid;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 1.1rem 0 1rem;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.row-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.row-name { font-weight: 700; font-size: var(--s1); line-height: 1.2; }
+.row-count { display: flex; align-items: baseline; gap: 0.3rem; white-space: nowrap; }
+.row-count .num { font-weight: 800; font-size: var(--s3); line-height: 1; letter-spacing: -0.02em; }
+.row-count .unit { color: var(--muted); font-size: var(--s-1); }
+.row-where { color: var(--muted); font-size: var(--s-1); }
+.row-where .tag {
+  display: inline-block; margin-left: 0.4rem; padding: 0 0.45rem;
+  border: 1px solid currentColor; border-radius: 4px; font-size: 0.75rem;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  height: 1.125rem;
+  margin: 0.45rem 0 0.15rem;
+  background: var(--track);
+  border-radius: 2px;
+  container-type: inline-size;
+}
+.bar .fill {
+  position: absolute; inset: 0 auto 0 0;
+  background: var(--notches-ink);
+  transform-origin: left;
+}
+.bar .usual {
+  position: absolute; top: -0.3rem; bottom: -0.3rem;
+  width: 2px; margin-left: -1px;
+  background: var(--ink);
+}
+
+.row-status { font-size: var(--s-1); font-weight: 700; }
+.row-status .usually { font-weight: 400; color: var(--muted); }
+
+.p-much { color: var(--busier); }
+.p-busier { color: var(--busy); }
+.p-usual { color: var(--usual); }
+.p-quieter { color: var(--quiet); }
+.p-none { color: var(--muted); }
+
+/* Expanded detail */
+.row-detail { padding: 0 0 1.4rem; }
+.trend { margin: 0; }
+.trend figcaption { font-size: var(--s-1); color: var(--muted); margin-bottom: 0.35rem; }
+.spark { display: block; width: 100%; height: 72px; overflow: visible; }
+.spark .b { fill: var(--usual); }
+.spark .b.today { fill: var(--ink); }
+.spark .wk { fill: var(--track); }
+.spark-range { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+.breakdown {
+  display: grid; grid-template-columns: 1fr auto; gap: 0.35rem 1rem;
+  margin: 1.1rem 0 1rem; font-size: var(--s-1);
+}
+.breakdown dt { color: var(--muted); }
+.breakdown dd { margin: 0; font-weight: 700; text-align: right; }
+.directions { font-weight: 700; }
+
+.empty { padding: 1.5rem 0; color: var(--muted); }
+
+/* About */
+.about { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--ink); max-width: 36rem; }
+.about h2 { font-size: var(--s1); margin: 1.75rem 0 0.4rem; line-height: 1.25; }
+.about h2:first-child { margin-top: 0; }
+.about p { margin: 0 0 0.85rem; }
+
+.footer { margin-top: 2.5rem; color: var(--muted); font-size: var(--s-1); }
+
+/* One orchestrated moment: bars fill in on first load. */
+@media (prefers-reduced-motion: no-preference) {
+  .list.animate .fill { animation: fill-in 700ms cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 25ms); }
+  @keyframes fill-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+
+@media (min-width: 40rem) {
+  .lede { padding-top: 3.5rem; }
+  .row-head { padding: 1.3rem 0 1.15rem; }
+}

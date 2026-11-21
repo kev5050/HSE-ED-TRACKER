@@ -95,6 +95,11 @@
       "fetched_at": "2026-11-20T16:05:57+00:00",
       "sha256": "c451c83576222f084bf1e3c5aed94ee5cecab01ed52843b3d604d3ed002377f5",
       "snapshot_id": "2026-11-19T08:00"
+    },
+    "https://www2.hse.ie/documents/11600/Urgent_and_Emergency_Care_-_20_November_2026.pdf": {
+      "fetched_at": "2026-11-21T15:18:30+00:00",
+      "sha256": "fcc5f67dff6093c0468ef6c2ef6fdc1033ca45de6fb34926c5cdfa6d62801789",
+      "snapshot_id": "2026-11-20T08:00"
     }
   }
 }

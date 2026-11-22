@@ -5,7 +5,7 @@
     "region": "HSE South West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "beaumont-hospital",
@@ -13,7 +13,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "chi-at-crumlin",
@@ -21,7 +21,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "chi-at-tallaght",
@@ -29,7 +29,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "chi-at-temple-street",
@@ -37,7 +37,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "cavan-general-hospital",
@@ -45,7 +45,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "connolly-hospital",
@@ -53,7 +53,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "cork-university-hospital",
@@ -61,7 +61,7 @@
     "region": "HSE South West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "ennis-hospital",
@@ -69,7 +69,7 @@
     "region": "HSE Mid West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "galway-university-hospital",
@@ -77,7 +77,7 @@
     "region": "HSE West & North West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "letterkenny-university-hospital",
@@ -85,7 +85,7 @@
     "region": "HSE West & North West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "louth-county-hospital",
@@ -93,7 +93,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mrh-mullingar",
@@ -101,7 +101,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mrh-portlaoise",
@@ -109,7 +109,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mrh-tullamore",
@@ -117,7 +117,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mallow-general-hospital",
@@ -125,7 +125,7 @@
     "region": "HSE South West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mater-misericordiae-university-hospital",
@@ -133,7 +133,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mayo-university-hospital",
@@ -141,7 +141,7 @@
     "region": "HSE West & North West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "mercy-university-hospital",
@@ -149,7 +149,7 @@
     "region": "HSE South West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "naas-general-hospital",
@@ -157,7 +157,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "national-orthopaedic-hospital-cappagh",
@@ -165,7 +165,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "national-rehabilitation-hospital",
@@ -173,7 +173,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "nenagh-hospital",
@@ -181,7 +181,7 @@
     "region": "HSE Mid West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "our-lady-of-lourdes-hospital",
@@ -189,7 +189,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "our-ladys-hospital-navan",
@@ -197,7 +197,7 @@
     "region": "HSE Dublin & North East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "portiuncula-university-hospital",
@@ -205,7 +205,7 @@
     "region": "HSE West & North West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "roscommon-university-hospital",
@@ -213,7 +213,7 @@
     "region": "HSE West & North West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "sligo-university-hospital",
@@ -221,7 +221,7 @@
     "region": "HSE West & North West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "south-infirmary-victoria-university-hospital",
@@ -229,7 +229,7 @@
     "region": "HSE South West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-lukes-general-hospital-kilkenny",
@@ -237,7 +237,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-columcilles-hospital",
@@ -245,7 +245,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-jamess-hospital",
@@ -253,7 +253,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-johns-hospital-limerick",
@@ -261,7 +261,7 @@
     "region": "HSE Mid West",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-lukes-radiation-oncology-network",
@@ -269,7 +269,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-michaels-hospital",
@@ -277,7 +277,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": false,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "st-vincents-university-hospital",
@@ -285,7 +285,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "tallaght-university-hospital",
@@ -293,7 +293,7 @@
     "region": "HSE Dublin & Midlands",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "tipperary-university-hospital",
@@ -301,7 +301,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "uh-kerry",
@@ -309,7 +309,7 @@
     "region": "HSE South West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "uh-limerick",
@@ -317,7 +317,7 @@
     "region": "HSE Mid West",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "uh-waterford",
@@ -325,7 +325,7 @@
     "region": "HSE Dublin & South East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   },
   {
     "id": "wexford-general-hospital",
@@ -333,6 +333,6 @@
     "region": "HSE Dublin & South East",
     "has_ed": true,
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-20"
+    "last_seen": "2026-11-21"
   }
 ]

@@ -930,3 +930,52 @@ snapshot_id,report_date,snapshot_time,kind,region,hospital_id,hospital,ed_trolle
 2026-11-23T08:00,2026-11-23,08:00,hospital,HSE West & North West,portiuncula-university-hospital,Portiuncula University Hospital,4,0,4,,5,0,0
 2026-11-23T08:00,2026-11-23,08:00,hospital,HSE West & North West,roscommon-university-hospital,Roscommon University Hospital,,,,,3,,
 2026-11-23T08:00,2026-11-23,08:00,hospital,HSE West & North West,sligo-university-hospital,Sligo University Hospital,20,14,34,,43,17,1
+2026-11-24T08:00,2026-11-24,08:00,national_total,,,National Total,324,152,476,,580,69,9
+2026-11-24T08:00,2026-11-24,08:00,region_total,,,HSE Dublin & Midlands,94,21,115,,102,19,5
+2026-11-24T08:00,2026-11-24,08:00,region_total,,,HSE Dublin & North East,40,0,40,,72,0,0
+2026-11-24T08:00,2026-11-24,08:00,region_total,,,HSE Dublin & South East,54,14,68,,154,10,0
+2026-11-24T08:00,2026-11-24,08:00,region_total,,,HSE Mid West,5,48,53,,55,8,0
+2026-11-24T08:00,2026-11-24,08:00,region_total,,,HSE South West,72,25,97,,75,9,4
+2026-11-24T08:00,2026-11-24,08:00,region_total,,,HSE West & North West,59,44,103,,122,23,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,chi-at-crumlin,CHI at Crumlin,3,1,4,,3,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,chi-at-tallaght,CHI at Tallaght,0,0,0,,2,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,chi-at-temple-street,CHI at Temple Street,0,0,0,,1,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,mrh-mullingar,MRH Mullingar,15,2,17,,10,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,mrh-portlaoise,MRH Portlaoise,3,0,3,,10,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,mrh-tullamore,MRH Tullamore,0,0,0,,16,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,naas-general-hospital,Naas General Hospital,22,1,23,,17,9,5
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,st-jamess-hospital,St. James's Hospital,24,6,30,,28,2,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,st-lukes-radiation-oncology-network,St. Luke's Radiation Oncology Network,,,,,0,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & Midlands,tallaght-university-hospital,Tallaght University Hospital,27,11,38,,15,8,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,beaumont-hospital,Beaumont Hospital,14,0,14,,31,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,cavan-general-hospital,Cavan General Hospital,10,0,10,,3,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,connolly-hospital,Connolly Hospital,1,0,1,,5,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,louth-county-hospital,Louth County Hospital,,,,,0,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,mater-misericordiae-university-hospital,Mater Misericordiae University Hospital,14,0,14,,21,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,national-orthopaedic-hospital-cappagh,National Orthopaedic Hospital Cappagh,,,,,6,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,our-lady-of-lourdes-hospital,Our Lady of Lourdes Hospital,0,0,0,,5,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & North East,our-ladys-hospital-navan,Our Lady's Hospital Navan,1,0,1,,1,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,national-rehabilitation-hospital,National Rehabilitation Hospital,,,,,12,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,st-lukes-general-hospital-kilkenny,St Luke's General Hospital Kilkenny,6,6,12,,10,1,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,st-columcilles-hospital,St. Columcille's Hospital,,,,,13,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,st-michaels-hospital,St. Michael's Hospital,,,,,5,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,st-vincents-university-hospital,St. Vincent's University Hospital,29,6,35,,39,4,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,tipperary-university-hospital,Tipperary University Hospital,17,0,17,,26,5,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,uh-waterford,UH Waterford,0,0,0,,38,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Dublin & South East,wexford-general-hospital,Wexford General Hospital,2,2,4,,11,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Mid West,ennis-hospital,Ennis Hospital,,,,,6,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Mid West,nenagh-hospital,Nenagh Hospital,,,,,6,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Mid West,st-johns-hospital-limerick,St. John's Hospital Limerick,,,,,20,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE Mid West,uh-limerick,UH Limerick,5,48,53,,23,8,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE South West,bantry-general-hospital,Bantry General Hospital,,,,,7,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE South West,cork-university-hospital,Cork University Hospital,47,20,67,,45,8,4
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE South West,mallow-general-hospital,Mallow General Hospital,,,,,6,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE South West,mercy-university-hospital,Mercy University Hospital,16,5,21,,5,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE South West,south-infirmary-victoria-university-hospital,South Infirmary Victoria University Hospital,,,,,1,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE South West,uh-kerry,UH Kerry,9,0,9,,11,1,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE West & North West,galway-university-hospital,Galway University Hospital,17,12,29,,38,3,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE West & North West,letterkenny-university-hospital,Letterkenny University Hospital,11,7,18,,29,3,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE West & North West,mayo-university-hospital,Mayo University Hospital,2,16,18,,6,11,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE West & North West,portiuncula-university-hospital,Portiuncula University Hospital,4,0,4,,5,0,0
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE West & North West,roscommon-university-hospital,Roscommon University Hospital,,,,,3,,
+2026-11-24T08:00,2026-11-24,08:00,hospital,HSE West & North West,sligo-university-hospital,Sligo University Hospital,25,9,34,,41,6,0

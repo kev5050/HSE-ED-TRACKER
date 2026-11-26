@@ -41,6 +41,16 @@
       "sha256": "1ada28d8375922b2118d26fefa6acd79f8d25452f346afde047ad8b9492b94e9",
       "snapshot_id": "2026-11-24T08:00"
     },
+    "https://assets.hse.ie/media/documents/Urgent_and_Emergency_Care_-_25_November_2026.pdf": {
+      "fetched_at": "2026-11-26T17:41:23+00:00",
+      "sha256": "ccbf35e29c5738d2b5ee39e42559e7cd49d49f335ba6ca4ae1f43ef7205763de",
+      "snapshot_id": "2026-11-25T08:00"
+    },
+    "https://assets.hse.ie/media/documents/Urgent_and_Emergency_Care_-_26_November_2026.pdf": {
+      "fetched_at": "2026-11-26T17:41:25+00:00",
+      "sha256": "96331baca791c78bf2d9d155ee33f746dc5d0aadb019180056079ebd7bc817fc",
+      "snapshot_id": "2026-11-26T08:00"
+    },
     "https://www2.hse.ie/documents/11509/Urgent_and_Emergency_Care_-_6_November_2026.pdf": {
       "fetched_at": "2026-11-19T22:14:02+00:00",
       "sha256": "09be9eb3eb38e6edf2c2ac6051011633d03e076d69ac07e593550082ce30d52e",
@@ -140,6 +150,11 @@
       "fetched_at": "2026-11-25T17:56:34+00:00",
       "sha256": "1ada28d8375922b2118d26fefa6acd79f8d25452f346afde047ad8b9492b94e9",
       "snapshot_id": "2026-11-24T08:00"
+    },
+    "https://www2.hse.ie/documents/11636/Urgent_and_Emergency_Care_-_25_November_2026.pdf": {
+      "fetched_at": "2026-11-26T17:41:26+00:00",
+      "sha256": "ccbf35e29c5738d2b5ee39e42559e7cd49d49f335ba6ca4ae1f43ef7205763de",
+      "snapshot_id": "2026-11-25T08:00"
     }
   }
 }

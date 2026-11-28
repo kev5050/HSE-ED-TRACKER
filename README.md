@@ -96,17 +96,47 @@ appear in the ED rankings.
 
 ## Website
 
-`site/` is a static page (plain HTML, CSS and JS, no build step) that reads
-`data/latest.json`, `data/history.json` and `data/locations.json`.
-`.github/workflows/pages.yml` publishes it to GitHub Pages on every change and
-after every hourly fetch.
+`site/` is whichED, design B "One clear answer". It's plain HTML, CSS and JS with
+no build step, and it loads nothing from other sites.
 
-- Preview locally: `mkdir -p _site/data && cp -r site/* _site/ && cp data/latest.json data/history.json data/locations.json _site/data/ && python -m http.server -d _site`
-- Hospital coordinates and towns live in `data/locations.json` (hand-maintained,
-  approximate - check them). `children: true` marks children's EDs.
-- The site name is a placeholder ("ED Today") in `site/index.html`.
+- `data/locations.json`: every ED and HSE Injury Unit, with age limits, Eircode,
+  map point, Injury Unit hours and the HSE page each came from. Hand-maintained.
+  **A wrong age here can send a child to a hospital that won't treat them.**
+- `site/places.json`: towns, suburbs and Eircode areas, searched on the device.
+- `data/latest.json` and `data/history.json`: written by the fetch job.
+- Sources and rules: [docs/site-data.md](docs/site-data.md).
+
+`.github/workflows/pages.yml` publishes the site to GitHub Pages on every change
+and after every fetch, once Pages is switched on for the repo.
+
+Preview locally, then open http://localhost:8000:
+
+```bash
+mkdir -p _site/data
+cp -r site/* _site/
+cp data/latest.json data/history.json data/locations.json _site/data/
+python -m http.server -b 127.0.0.1 -d _site
+```
+
+Check it in Chrome. Run this after any change to `site/` or `data/locations.json`:
+
+```bash
+pip install playwright
+python checks/site_check.py check-output
+```
+
+## Before a public launch
+
+- A clinician checks the age list, the "Where should I go?" wording and the
+  Northern Ireland note in border counties.
+- Re-check every HSE page in `data/locations.json`.
+- Then remove the "Test version" banner and the `noindex` line in `site/index.html`.
 
 ## Next up
 
-- Custom domain once a name is picked.
-- Same-weekday comparison for "vs usual" once there are ~6 weeks of history.
+- Bring back "Use my location" and "A less busy option", paused in the first
+  version, once both use road times worked out in advance (docs/site-data.md).
+- National "busier than usual today" view.
+- Private EDs, survey and cookie-free visitor counts.
+- A more reliable fetch schedule: GitHub drops many scheduled runs.
+- Same-time and same-weekday comparison once there is enough history.

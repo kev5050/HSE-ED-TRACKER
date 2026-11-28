@@ -5,3 +5,6 @@ __pycache__/
 # Raw PDFs are ~100KB each and add up fast in git. Kept locally for re-parsing.
 data/raw/
 data/failed/
+# Local site preview and check screenshots
+_site/
+check-output/
